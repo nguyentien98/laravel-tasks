@@ -10,7 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::put('lang', [ 
+						'as' => 'changeLanguage', 
+						'uses' => 'TaskController@changeLanguage'
+					]);
+
+Route::group(['middleware' => 'lang'], function(){
+	Route::resource('tasks', 'TaskController');
 });
