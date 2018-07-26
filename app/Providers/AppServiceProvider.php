@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Schema;
+use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {

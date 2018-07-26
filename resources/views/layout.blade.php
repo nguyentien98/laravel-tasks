@@ -31,6 +31,7 @@
 	@section('js')
 		<script src="{{asset('js/jquery.min.js')}}"></script>
 		<script>
+			console.log('x');
 			$(document).ready(function(){
 				$('#lang').change(function(){
 					$(this).parent('form').submit();
