@@ -24,3 +24,7 @@ Route::put('lang', [
 Route::group(['middleware' => 'lang'], function(){
 	Route::resource('tasks', 'TaskController');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
