@@ -14,4 +14,9 @@ class TaskPolicy
     {
         return $user->id === $task->user_id;
     }
+
+    public function read(User $user, Task $task)
+    {
+    	return $user->id === $task->user_id;
+    }
 }

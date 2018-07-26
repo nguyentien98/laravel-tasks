@@ -21,9 +21,7 @@ Route::put('lang', [
 						'uses' => 'TaskController@changeLanguage'
 					]);
 
-Route::group(['middleware' => 'lang'], function(){
-	Route::resource('tasks', 'TaskController');
-});
+Route::resource('tasks', 'TaskController');
 
 Auth::routes();
 
